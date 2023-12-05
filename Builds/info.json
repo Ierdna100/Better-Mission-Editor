@@ -1,0 +1,19 @@
+{
+  "name": "Better Mission Editor",
+  "description": "It adds plenty of stuff to mission editor",
+  "dll_file": "BetterMissionEditor.dll",
+  "last_edit": 638373249533940350,
+  "pub_id": "",
+  "json_version": "",
+  "version": "",
+  "tagline": "",
+  "repository": "",
+  "is_public": false,
+  "unlisted": false,
+  "preview_image": "",
+  "web_preview_image": "",
+  "dependencies": null,
+  "mod_dependencies": null,
+  "menu_mod": false,
+  "ContentType": 3
+}
