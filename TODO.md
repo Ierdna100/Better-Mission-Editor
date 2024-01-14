@@ -1,0 +1,112 @@
+# Mission Editor mod TODO list
+
+- Combined or external editor
+    - Currently, switching between editors is very dreadful and neither has the tools the other has.
+- Being able to select static objects
+    - It is painful to search through the object list to find a singular object we wish to destroy, or else.
+- Copy Paste functionality
+    - There is currently very limited ability to copy-paste.
+- Prefabs for easy copy-pasting
+    - There is currently 0 ability to make prefabs of stuff.
+- Ctrl-Z/Ctrl-Y functionality
+    - There is currently no Undo/Redo functionality.
+- Live testing (or at least no need for VR)
+    - The ability to run the mission in the editor, and not need to start it. Like testing code in an editor with breakpoints and a debugger.
+- Screenshot tool
+    - The ability to take high-resolution screenshots of stuff with a freecam.
+- Measuring tool
+    - The ability to measure with a better tool, notably featuring Manhattan distance.
+- Performance tool
+    - A way to profile missions. Possible collect data to be able to estimate CPU usage of a mission down the line.
+- Prop brush
+    - The ability to add props with a brush.
+- Prop line brush
+    - The ability to align a bunch of props. This is useful to make walls of stuff.
+- Reloading map while in-game
+    - Being able to reload the mission in-game.
+- Transform viewer
+    - Rotation
+    - Position
+- Internal VTS viewer
+    - If I ever don't implement a functionality, this would be great for those unimplemented things.
+- Shortcuts
+    - Ctrl+C, Ctrl+V : Copy-paste
+    - Ctrl+Z, Ctrl+Y, Ctrl+Shift+Z : Undo/Redo
+    - $[1-0]$ alphakeys : Boundable to being able to place a prefab or such. 
+- Waypoint placer / Waypoint line placer
+    - Ability to make lines with set radii to make refuelling planes better and such.
+- Autosave
+    - The ability to autosave at X interval.
+- Weapon range visualizer
+    - Visualizing the range of weapons, notably their sight-distance, their RADAR distance, and possible estimated distance to another plane given a certain angle.
+- Multi-select
+    - The ability to multi-select and bulk-change
+- RCS visualizer
+    - The ability to visualize RCS.
+- Prop anarchy
+    - The removal of the prop check that makes sure props dont enter one another.
+- Larger map sizes
+    - The ability to make larger map sizes without editing a file
+- More customization options for map editor
+    - New tools to add. Yet to think about those.
+- Voice recorder directly in-game
+    - I dunno about this. But it's to make it easier to record voicelines and such.
+- Todo list tool
+    - A tool that has a todo-list for when your missions making adventure drags on for 2 months.
+- Min-damage visualizer / reference chart
+    - Some kind of tool to tell if a certain weapon can damage a certain object.
+- Charts and extra info about units and tools
+    - Wiki data directly in the editor, or references to those.
+- Video playback functionality and visualization
+    - The ability to playback video as a message, officially supported but no way to do it without VTS editing.
+- Code implementation (? maybe)
+    - One day: bahacode.bcode
+- Groups
+    - The ability to group events, planes, waypoints, etc.
+- Show units for everything (+ settings)
+    - The ability to show units (meters, m/s, seconds) and to be able to change what unit they are in.
+- For loops as an event type
+    - Currently, making an event aircraft-specific in large-MP Missions is terrible. The ability to just have some kind of for loop would be great.
+- Settings
+    - A settings page. Probably do this first?
+- Larger path visualizations
+    - Path visualizations are hard to see. Make them larger.
+- Global Value "Increment" or "Decrement" actions should default to a value of '1' instead of '0' when created
+    - Minor change really, self-explanatory
+- Changing an action to a different action that takes the same parameters should not reset the parameters
+    - Self-explanatory
+- When testing a singleplayer mission from the editor, clicking "Continue Flight" after death should respawn the player.
+    - Minor change
+- When uploading campaign to Steam Workshop, show detailed error if campaign's image is >1MB (else the user just sees "Upload error! LimitExceeded")
+    - Self-explanatory
+- Debug menu while in-game, showing all global variables as well as the state of events (enabled/disabled/complete and which step a Sequence is on) 
+    - Tie this in with running the mission live before in pancake mode. Give ability to change stuff live.
+- Copy/pasting conditions and actions
+    - Already explained above.
+- Even Sequencer rework:
+    - Instead of the current system with nodes containing 2x conditions (start and end), 1x delay, 1x comment, and a block for actions, each of these should be a separate type of node.
+        - [Add Delay]
+        - [Add Condition]
+        - [Add Actions]
+        - [Add Comment]
+- Ability to "lockstep" events
+    - Instead of relying on race conditions, make it so we can lockstep events.
+- ALL alt-spawn capable units can be added to groups (including "Stationary" units)
+    - Sypwn's Explanation: Some units (such as stationary radars and bunkers) are capable of having alt spawns, but cannot be added to a unit group (Alpha, Bravo, etc). Thus, you cannot use the "Sync alt spawn" feature with them. I requested this feature before the "Force Alt Spawn" action was added, so it's not a big deal anymore.
+- Action to teleport Units
+    - [Related link on wiki](https://vtolvr.wiki.gg/wiki/User_blog:Sypwn/Mission_Editor_FAQ#teleportunit)
+- Action to change a unit's faction.
+    - No true way to do this without code. But a workaround would be to spawn two units and teleport it in it's place. I'm not sure where this would be useful.
+- 
+
+## Debug functionality (only with mod enabled on mission maker's side): 
+- "Write text to flight log" action (custom text, with optional inclusion of the current value of a GV)
+
+## To test:
+- Movement speed option for naval units, specifically a "turbo"  speed option that's double their normal speed. (Whether this is realistic or not is classified. But most VTOL players don't want realistic 3+ hour missions anyway.)
+> NB: This may be possible using base functionality, investigate. It may be possible to set their speed as a number, it may not be force to the values of the enum.
+
+- Give start/complete/fail objective actions a "silent" option that suppresses the HUD popup.
+> NB: This may be possible using base functionality.
+
+- Does adding files to the mission directory change much?
