@@ -1,0 +1,1 @@
+To enable Load On Start, make sure to enable "Auto Update" to any mod, reload the modloader, then open settings.json in your files. Search for the entry for "Better_Mission_Editor" and change "Load On Start Check" to true.
